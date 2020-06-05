@@ -27,12 +27,12 @@ Store once and use later by refilling clipboard through executing this command.
 You can use it directly from the CLI:
 
 ```bash
-deno run --allow-run --allow-read --allow-write https://deno.land/x/a0/cli.ts <alias> <text>
+deno run --allow-env --allow-run --allow-read --allow-write https://deno.land/x/a0/cli.ts <alias> <text>
 
 # alias: <alias>
 # text: <text>
 
-deno run --allow-run --allow-read --allow-write https://deno.land/x/a0/cli.ts <alias>
+deno run --allow-env --allow-run --allow-read --allow-write https://deno.land/x/a0/cli.ts <alias>
 
 # alias: <alias>
 # text: <text>
@@ -41,7 +41,7 @@ deno run --allow-run --allow-read --allow-write https://deno.land/x/a0/cli.ts <a
 ### You can also install it globally using the following:
 
 ```bash
-deno install --allow-run --allow-read --allow-write -n a https://deno.land/x/a0/cli.ts
+deno install --allow-env --allow-run --allow-read --allow-write -f -n a https://deno.land/x/a0/cli.ts
 ```
 
 Then, the package is available as command **a** to run:
@@ -80,6 +80,7 @@ a pass changedUser1Password
 
 ## Configuration
 Required permissions:
+- `allow-env`
 - `allow-run`
 - `allow-read`
 - `allow-write`
